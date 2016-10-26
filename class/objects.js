@@ -143,3 +143,53 @@ console.log(prius)
 // SamYoung.height = "6' 2"
 // console.log(SamYoung)
 //
+
+
+
+
+// Clone the first two spaceship variables and create two new ones with different speeds and names.
+// Extend the second two spaceship constructors (Constructor Function and Class) and create two new spaceships with different speeds and names.
+// Add a land method that console logs a landing message. Call the land method 3 seconds after you call the original launch method using setTimeout. For the Constructor Function spaceship, use .prototype to add it on retroactively.
+
+var spaceShip1 = {
+    topSpeed: '21yph',
+    shipName: "Galaxy Cruiser",
+    launch: function() {
+        console.log(this.shipName + ' launching to infinity and beyond at ' + this.topSpeed + '!')
+    }
+}
+spaceShip1.launch()
+//object New object New object New object New object New object New object New
+
+var spaceShip2 = new Object()
+spaceShip2.topSpeed = '12yph'
+spaceShip2.shipName = 'Big Goliath'
+spaceShip2.launch = function(){
+    console.log(this.shipName + ' launching to infinity and beyond at ' + this.topSpeed + '!.')}
+spaceShip2.launch()
+// //Constructor function Constructor function Constructor function
+
+
+var spaceShip = function() {
+    this.topSpeed = '30yph'
+    this.shipName = 'Dauntless Runner'
+    this.launch = function() {
+        console.log(this.shipName + ' launching to infinity and beyond at ' + this.topSpeed + '!.')
+    }
+}
+var spaceShip3 = new spaceShip
+spaceShip3.launch()
+// // Class Class Class Class Class Class Class Class Class Class
+// Class
+
+class spaceShipGo {
+    constructor() {
+        this.topSpeed = '19yph'
+        this.shipName = 'Flat Mellow Yellow '
+    }
+    launch(){
+        console.log(this.shipName + ' launching to infinity and beyond at ' + this.topSpeed + '!.')
+    }
+}
+var spaceShip4 = new spaceShipGo()
+spaceShip4.launch()
